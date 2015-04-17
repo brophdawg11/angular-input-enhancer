@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="../src/angular-input-enhancer.css" />
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../src/angular-input-enhancer.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-app="app" ng-strict-di>
+    <div id="ctrl" ng-controller="ctrl">
+      <form name="form">
+        <angular-input-enhancer name="firstName"
+                                id="firstName"
+                                label="First Name"
+                                error-messages="{
+                                  required: 'Required field',
+                                  email: 'Invalid email address',
+                                  pattern: 'Field cannnot contain digits'
+                                }">
+          <input type="input"
+                 id="firstName"
+                 name="firstName"
+                 ng-model="data.firstName"
+                 ng-required="true"
+                 ng-pattern="/^[^0-9]*$/">
+        </angular-input-enhancer>
+
+        <angular-input-enhancer name="gender"
+                                id="gender"
+                                label="Gender"
+                                error-messages="{
+                                  required: 'Please select a gender'
+                                }">
+          <select name="gender"
+                  id="gender"
+                  ng-model="data.genders.selected"
+                  ng-required="true"
+                  ng-options="gender.type for gender in data.genders.available">
+            <option value="">Select your gender</option>
+          </select>
+        </angular-input-enhancer>
+
+      </form>
+    </div>
+  </body>
+
+</html>

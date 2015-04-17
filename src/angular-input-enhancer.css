@@ -1,0 +1,26 @@
+.angular-input-enhancer {
+
+}
+
+.angular-input-enhancer .label {
+  display: block;
+  font-weight: bold;
+}
+
+.angular-input-enhancer input {
+  display: block;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid lightgrey;
+  box-shadow: none;
+  font-family: arial, sans-serif;
+}
+
+.angular-input-enhancer .errors {
+
+}
+
+.angular-input-enhancer .errors .error {
+  color: red;
+  font-style: italic;
+}

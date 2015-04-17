@@ -1,0 +1,13 @@
+<span class="angular-input-enhancer {{name}}">
+  <label class="label" for="{{::id}}">{{label}}</label>
+
+  <span ng-transclude />
+
+  <ul class="errors">
+    <li ng-repeat="(type, msg) in ::errorMessages"
+        class="error type-{{type}}"
+        ng-show="formCtrl[name].$touched && formCtrl[name].$error[type]">
+      {{ ::msg }}
+    </li>
+  </ul>
+</span>
