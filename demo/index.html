@@ -11,18 +11,18 @@
   <body ng-app="app" ng-strict-di>
     <div id="ctrl" ng-controller="ctrl">
       <form name="form">
-        <angular-input-enhancer name="firstName"
-                                id="firstName"
-                                label="First Name"
+        <angular-input-enhancer name="email"
+                                id="email"
+                                label="Email Address"
                                 error-messages="{
                                   required: 'Required field',
                                   email: 'Invalid email address',
                                   pattern: 'Field cannnot contain digits'
                                 }">
-          <input type="input"
-                 id="firstName"
-                 name="firstName"
-                 ng-model="data.firstName"
+          <input type="email"
+                 id="email"
+                 name="email"
+                 ng-model="data.email"
                  ng-required="true"
                  ng-pattern="/^[^0-9]*$/">
         </angular-input-enhancer>
